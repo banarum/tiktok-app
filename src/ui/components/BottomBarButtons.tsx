@@ -18,6 +18,8 @@ export const TabButton = ({type, name, focused}: any) => {
         return Assets.profileTabIcon;
       case TabNames.DISCOVER:
         return Assets.discoverTabIcon;
+      default:
+        return Assets.homeTabIcon;
       //break;
     }
   };
@@ -54,6 +56,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     textAlign: 'center',
     paddingLeft: 0,
+    fontFamily: 'SF Pro Rounded',
   },
   primaryRed: {
     alignItems: 'center',

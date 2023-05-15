@@ -32,9 +32,9 @@ export default () => {
   );
 
   useEffect(() => {
-    // call redux toolkit action to fetch data
     dispatch(fetchItems('following'));
     dispatch(fetchItems('following'));
+
     dispatch(fetchItems('forYou'));
     dispatch(fetchItems('forYou'));
   }, [dispatch]);

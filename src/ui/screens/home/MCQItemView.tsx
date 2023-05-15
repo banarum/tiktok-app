@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {View, StyleSheet, Dimensions, Text} from 'react-native';
 import {MultipleChoiceQuestion} from '../../../network/types';
 import SocialButtonsView from '../../components/home/SocialButtonsView';
@@ -7,10 +7,6 @@ import * as AppConstants from '../../../utils/AppConstants';
 import PlaylistLabelView from '../../components/home/PlaylistLabelView';
 import SectionLabelView from '../../components/home/SectionLabelView';
 import AnswerOptionsView from './AnswerOptionsView';
-import {useSelector} from 'react-redux';
-import {RootState, useAppDispatch} from '../../../store';
-import {fetchItems} from '../../../store/slices/QuestionsSlice';
-import {useFocusEffect} from '@react-navigation/native';
 
 type Props = {
   item: MultipleChoiceQuestion;

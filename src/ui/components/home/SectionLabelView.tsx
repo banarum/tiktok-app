@@ -1,8 +1,6 @@
 import React from 'react';
 
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import Assets, {Asset} from '../../../assets';
-import {AssetImage} from '../../../assets/AssetImage';
+import {View, StyleSheet, Text} from 'react-native';
 import {Flashcard, MultipleChoiceQuestion} from '../../../network/types';
 
 type Props = {
@@ -36,11 +34,13 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     textAlign: 'left',
+    fontFamily: 'SF Pro Rounded',
   },
   descriptionText: {
     color: 'white',
     fontSize: 15,
     textAlign: 'left',
+    fontFamily: 'SF Pro Rounded',
   },
   descriptionBoldText: {
     color: 'white',

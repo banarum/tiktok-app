@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import Assets, {Asset} from '../../../assets';
+import {View, StyleSheet, Text} from 'react-native';
+import Assets from '../../../assets';
 import {AssetImage} from '../../../assets/AssetImage';
 import {Flashcard, MultipleChoiceQuestion} from '../../../network/types';
 
@@ -37,5 +37,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     alignSelf: 'center',
     marginStart: 4,
+    fontFamily: 'SF Pro Rounded',
   },
 });

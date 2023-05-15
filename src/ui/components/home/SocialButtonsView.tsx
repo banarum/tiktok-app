@@ -69,5 +69,9 @@ const styles = StyleSheet.create({
   socialButtonGap: {
     flex: 1,
   },
-  socialButtonText: {color: 'white', fontSize: 12},
+  socialButtonText: {
+    color: 'white',
+    fontSize: 12,
+    fontFamily: 'SF Pro Rounded',
+  },
 });

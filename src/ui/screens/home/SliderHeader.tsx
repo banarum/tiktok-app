@@ -10,11 +10,28 @@ import * as AppConstants from '../../../utils/AppConstants';
 import Assets from '../../../assets';
 
 export default ({tab, onTabChange}: any) => {
+  // create interval timer
+  const [timer, setTimer] = React.useState(0);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setTimer(timer + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [timer]);
+
+  let timerText = '';
+
+  if (timer < 60) {
+    timerText = `${timer}s`;
+  } else {
+    timerText = `${Math.floor(timer / 60)}m`;
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.leftContainer}>
         <AssetImage asset={Assets.timerIcon} height={20} />
-        <Text style={styles.timerText}>10m</Text>
+        <Text style={styles.timerText}>{timerText}</Text>
       </View>
       <View style={styles.centerContainer}>
         <TouchableOpacity
@@ -90,6 +107,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     marginLeft: 4,
+    fontFamily: 'SF Pro Rounded',
   },
   tabFollowingContainer: {
     marginRight: 11,
@@ -102,12 +120,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     //fontFamily: 'SF-Pro-Rounded',
     fontWeight: 'normal',
+    fontFamily: 'SF Pro Rounded',
   },
   tabSelectedText: {
     color: '#fff',
     fontSize: 18,
     //fontFamily: 'SF-Pro-Rounded',
     fontWeight: 'bold',
+    fontFamily: 'SF Pro Rounded',
   },
   tabForYouContainer: {
     marginLeft: 11,

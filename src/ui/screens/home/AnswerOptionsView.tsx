@@ -2,13 +2,10 @@ import React from 'react';
 import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import {
-  Flashcard,
-  MultipleChoiceAnswer,
   MultipleChoiceOption,
   MultipleChoiceQuestion,
 } from '../../../network/types';
-import {RootState, useAppDispatch} from '../../../store';
-import {getAnswerToMCQ} from '../../../store/slices/AnswersSlice';
+import {RootState} from '../../../store';
 
 type Props = {
   item: MultipleChoiceQuestion;
@@ -89,5 +86,6 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 17,
     alignSelf: 'center',
+    fontFamily: 'SF Pro Rounded',
   },
 });

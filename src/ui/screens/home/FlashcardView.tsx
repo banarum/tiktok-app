@@ -63,10 +63,12 @@ const styles = StyleSheet.create({
   questionText: {
     color: 'white',
     fontSize: 21,
+    fontFamily: 'SF Pro Rounded',
   },
   answerText: {
     color: '#FFFFFFB3',
     fontSize: 21,
-    flex: 1,
+    flex: 10,
+    fontFamily: 'SF Pro Rounded',
   },
 });
